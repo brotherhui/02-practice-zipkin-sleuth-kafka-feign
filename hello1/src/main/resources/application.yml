@@ -1,0 +1,42 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: hello1
+#The sampler is the most important for each zipkin sleuth client
+  sleuth:
+      sampler:
+        percentage: 1.0
+#      enabled: true
+  cloud:
+    stream:
+# -- Please refer to https://github.com/spring-cloud/spring-cloud-stream-binder-kafka/blob/master/spring-cloud-stream-binder-kafka-docs/src/main/asciidoc/overview.adoc#binding-properties
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zkNodes: localhost:2181
+#          autoCreateTopics: true          
+#          autoAddPartitions: true
+#          headers:
+#            - X-B3-TraceId
+#            - X-B3-SpanId
+#            - X-B3-Sampled
+#            - X-B3-ParentSpanId
+#            - X-Span-Name
+#            - X-Span-Export
+#            - X-Process-Id
+#            - spanId
+#            - spanSampled
+#            - spanProcessId
+#            - spanParentSpanId
+#            - spanTraceId
+#            - spanName
+#            - messageSent
+#        bindings:
+#            liveSource:
+#                binder: kafka
+#                consumer:
+#                    headerMode: raw
+#                    autoCommitOffset: true
+#                destination: topic_example_name

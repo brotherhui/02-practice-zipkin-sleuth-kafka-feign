@@ -1,0 +1,41 @@
+spring-boot-starter-parent: 1.5.2/1.5.1/1.5.3
+spring-cloud-dependencies:Camden.RELEASE
+A. cannot started
+B. Exception in thread "main" java.lang.NoClassDefFoundError: org/springframework/boot/context/embedded/FilterRegistrationBean
+
+spring-boot-starter-parent: 1.4.3
+spring-cloud-dependencies:Camden.RELEASE
+A. started
+B. 2017-06-08 12:28:26.504 ERROR [hello1,,,] 37204 --- [ad | producer-3] o.s.k.support.LoggingProducerListener    : Exception thrown whe
+n sending a message with key='null' and payload='{-1, 5, 11, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 0, 0, 0, 12, 34, 11
+6, 101, 120, 116...' to topic sleuth:
+
+
+spring-boot-starter-parent: 1.4.3
+spring-cloud-dependencies:Camden.SR7
+A. started
+B. no any response
+
+spring-boot-starter-parent: 1.4.3
+spring-cloud-dependencies:Camden.SR6
+A. started fail
+B. but FeignClient not working...
+
+
+spring-boot-starter-parent: 1.4.3
+spring-cloud-dependencies:Camden.SR4
+A. started fail
+
+spring-boot-starter-parent: 1.4.3
+spring-cloud-dependencies:Dalston.RELEASE
+A. started fail
+B. Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-06-08 16:57:16,771 ERROR main o.s.b.SpringApplication:839 - Application startup failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'outputBindingLifecycle'; nested exception is java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy
+
+
+spring-boot-starter-parent: 1.5.2
+spring-cloud-dependencies:Dalston.RELEASE
+A. started
+B. WORKING....
+
